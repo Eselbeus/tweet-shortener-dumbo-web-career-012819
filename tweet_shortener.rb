@@ -18,7 +18,7 @@ end
 def word_substituter(tweet)
   tweet_arr = tweet.split(" ")
   revised = tweet_arr.map do |word|
-    if dictionary.keys.include?(word.casecmp)
+    if dictionary.keys.include?(word)
       dictionary[word]
     else
       word
