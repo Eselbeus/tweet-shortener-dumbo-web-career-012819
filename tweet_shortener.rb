@@ -18,7 +18,8 @@ end
 def word_substituter(tweet)
   tweet_arr = tweet.split(" ")
   revised = tweet_arr.map do |word|
-    if dictionary.keys.include?(word) || dictionary.keys.capitalized.include?(word)
+    downcase_word = word.downcase
+    if dictionary.keys.include?(word) || dictionary.keys.include?(downcase_word)
       dictionary[word]
     else
       word
